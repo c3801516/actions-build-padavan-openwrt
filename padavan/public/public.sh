@@ -83,13 +83,13 @@ echo "CONFIG_FIRMWARE_INCLUDE_SCUTCLIENT=n" >> .config   # SCUT校园网客户�
 echo "CONFIG_FIRMWARE_INCLUDE_OPENSSH=n" >> .config
 
 ### Include dropbear SSH. ~0.3MB
-echo "CONFIG_FIRMWARE_INCLUDE_DROPBEAR=y" >> .config
+echo "CONFIG_FIRMWARE_INCLUDE_DROPBEAR=n" >> .config
 
 ### Make the dropbear symmetrical ciphers and hashes faster. ~0.06MB
-echo "CONFIG_FIRMWARE_INCLUDE_DROPBEAR_FAST_CODE=y" >> .config
+echo "CONFIG_FIRMWARE_INCLUDE_DROPBEAR_FAST_CODE=n" >> .config
 
 ### Include HTTPS support for DDNS client. openssl ~1.2MB
 echo "CONFIG_FIRMWARE_INCLUDE_DDNS_SSL=n" >> .config
 
 ### Include HTTPS support. openssl ~1.2MB
-echo "CONFIG_FIRMWARE_INCLUDE_HTTPS=y" >> .config
+echo "CONFIG_FIRMWARE_INCLUDE_HTTPS=n" >> .config
