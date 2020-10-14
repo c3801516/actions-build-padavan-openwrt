@@ -6,7 +6,7 @@
 
   - PSG1218(k2，超频 600，按我的参数编译 16-22 分钟，~7.07mb)
   - NEWIFI3(新三，按我的参数编译大概 28-35 分钟，~25.5mb，集成了 v2 二进制文件和 frp 所以大)
-  - G-DOCK(竞斗云 2.0，按我的参数编译大概 3 小时 30 分钟，~57mb(ubi 包),ssp,openClash,passwall,hellword(和ssp二选一) 等)
+  - G-DOCK(竞斗云 2.0，按我的参数编译大概 3 小时 30 分钟，~57mb(ubi 包)。
   - 编译好的固件最好双清或者 breed，opboot，uboot，清除后刷入，防止修改了配置残余
   - 有关参数看设备的配置文件、sh文件、padavan或者openwrt对应 public.sh 文件
 
@@ -16,13 +16,13 @@
 
 - 如果有啥问题欢迎提交 [Lssues](https://github.com/HuaZhuangNan/actions-build-padavan-openwrt/issues) 反馈或者 TG:[https://t.me/huazhuangnan](https://t.me/huazhuangnan)邮箱：huazhuangnan@foxmail.com
 
-- 历史自编译网盘地址：[https://pan.baidu.com/s/1JM3bcyOBvK6yx\_-B_IaQrA](https://pan.baidu.com/s/1JM3bcyOBvK6yx_-B_IaQrA);提取码：**7a0u**
+- 历史自编译网盘地址：[https://pan.baidu.com/s/10_4qsIDBsLracQb_4QK6Gg](https://pan.baidu.com/s/10_4qsIDBsLracQb_4QK6Gg);提取码：**r6ie**
 
 - 恩山: [https://www.right.com.cn/forum/?567122](https://www.right.com.cn/forum/?567122)
 
 - B 站(有视频): [https://space.bilibili.com/436465779](https://space.bilibili.com/436465779)
 
-- 整理编写不易，喜欢的话右上角给个 **star** 呗，本人主学 WEB，大专，现读大三找实习中，有啥好工作引荐下呗；
+- 整理编写不易，喜欢的话右上角给个 **star** 呗
 
 ## [openwrt 单独参数及功能说明](/openwrt/readme.md)
 
@@ -39,12 +39,14 @@
 - [NEWIFI3](./logs/n3.md)
 - [G-DOCK2.0](./logs/g-dock.md)
 
-## 编译方法(注：所有固件都是下载的，所以需要编译其他版本的yml去改连接和编译的配置就好)
+## 编译方法
 
-- **Fork** 到自己仓库后(按需修改配置文件)然后点击 **star** (星标开始全部编译)；依赖这句判断:`github.event.repository.owner.id == github.event.sender.id`
+- 注：所有固件都是下载的，所以需要编译其他版本的yml去改连接和编译的配置就好
+- **Fork** 到自己仓库后(按需修改配置文件)
+- 需要哪种方式编译，打开 yml 文件里面的注释就好(就是删除#号)
 - 文件打包完会在 action 的任务里面
 
-### 监听文件 `push`  编译（默认编译，需要其他方式，打开注释修改或自己添加就好）
+### 监听文件 `push` 编译（默认编译，需要其他方式，打开注释修改或自己添加就好）
 
 - 选择按log文件默认的原因
   1. 方便查看管理
@@ -64,6 +66,8 @@ push:                     # push 操作
 ```
 
 ### 星标 `star` 编译
+
+- yml文件打开注释点击 **star** (星标开始全部编译)；依赖这句判断是仓库持有者点击:`github.event.repository.owner.id == github.event.sender.id`
 
 ```yml
 watch:                     # 监视操作
@@ -88,7 +92,7 @@ schedule:                 # 时间表
   |   |-- workfloms     # 存放 Action 的 YML文件
   |-- openwrt           # openwrt 有关
   |   |-- backups       # openwrt 文件备份 以及 openwrt 编译模板
-  |   |-- public.sh      # 公共的修改执行文件
+  |   |-- public.sh     # 公共的修改执行文件
   |-- padavan           # padavan 有关
   |   |-- backups       # padanvan文件备份 以及 padavan 编译模板
   |   |-- public.sh     # 公共的修改执行文件
@@ -139,6 +143,10 @@ schedule:                 # 时间表
 - [adguardhome 插件](https://github.com/rufengsuixing/luci-app-adguardhome) © rufengsuixing
 
 - [Hello Word 插件](https://github.com/jerrykuku/luci-app-vssr) © jerrykuku
+
+- [Hello Word 插件修复冲突版](https://github.com/Leo-Jo-My/luci-app-vssr-plus) © Leo-Jo-My
+
+- [OpenAppFilter 插件](https://github.com/destan19/OpenAppFilter) © destan19
 
 - [openwrt 插件配置参考恩山](https://www.right.com.cn/forum/thread-344825-1-1.html) © xtwz
 
